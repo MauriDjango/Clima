@@ -7,11 +7,34 @@
 
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="leaflet-openweathermap.css" />
 
+    <link rel="SHORTCUT ICON" HREF="./leaflet/owm.ico">
+    <link rel="stylesheet" type="text/css" href="./leaflet/leaflet/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="./leaflet/leaflet-openweathermap.css" />
+    <link rel="stylesheet" type="text/css" href="./leaflet/files/map.css" />
+    <link rel="stylesheet" type="text/css" href="./leaflet/leaflet/leaflet-languageselector.css" />
+
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+        key: "AIzaSyA5vF4Kqoc0M4U1ozdL4cvFr2xgQQWRb98",
+        v: "weekly",
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      });
+    </script>
+    <script src="js/app.js" type="module"></script>
+    <!--
+        <script src="js/API/google/maps.js" type="module"></script>
+    -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script type="text/javascript" src="leaflet.js"></script>
-    <script type="text/javascript" src="leaflet-openweathermap.js"></script>
+    <script src="./leaflet/leaflet/leaflet.js"></script>
+    <script src="./leaflet/leaflet/Permalink.js"></script>
+    <script src="./leaflet/leaflet/Permalink.Layer.js"></script>
+    <script src="./leaflet/leaflet/Permalink.Overlay.js"></script>
+    <script src="./leaflet/leaflet-openweathermap.js"></script>
+    <script src="./leaflet/leaflet/leaflet-languageselector.js"></script>
+    <script src="./leaflet/files/map_i18n.js"></script>
+    <script src="./leaflet/files/map.js"></script>
   </head>
   <body>
     <div class="container mx-auto">
@@ -59,25 +82,8 @@
           />
         </form>
         <div id="map"></div>
-        <div id="map-canvas"></div>
         </div>
     </div>
-    <script>
-      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-        key: "AIzaSyA5vF4Kqoc0M4U1ozdL4cvFr2xgQQWRb98",
-        v: "weekly",
-        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-        // Add other bootstrap parameters as needed, using camel case.
-      });
-    </script>
-<!--
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?client=CLIENT_ID"></script>
--->
-    <script src="js/app.js" type="module"></script>
-    <script src="js/API/google/maps.js" type="module"></script>
-<!--
-    <script src="js/API/google/places.js" type="module"></script>
--->
   </body>
 </html>
 

@@ -6,6 +6,7 @@ const resultado = document.querySelector("#resultado");
 
 window.addEventListener("load", () => {
     formulario.addEventListener("submit", findClimate);
+    initMap();
 });
 
 function findClimate(e) {
